@@ -11,20 +11,20 @@
 {\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}.}{\leveltext\leveltemplateid401\'01.;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
 {\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}.}{\leveltext\leveltemplateid501\'01.;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind1
+\margl1440\margr1440\vieww38400\viewh21600\viewkind1
 \hyphauto1\hyphfactor90
 \deftab720
 \pard\pardeftab720\sa321\partightenfactor0
 
 \f0\b\fs48 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 SQL Basics\
+SQL Basics\
 \pard\pardeftab720\sa298\partightenfactor0
 
 \fs36 \cf2 Instructions\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf2 In this project you will be practicing inserting and querying data using SQL. You\'92ll make use of a handy online tool provided by Devmountain that will allow you to write SQL in your browser.\
-Go to\'a0{\field{\*\fldinst{HYPERLINK "https://postgres.devmountain.com/"}}{\fldrslt \cf3 \strokec3 https://postgres.devmountain.com/}}\
+Go to\'a0{\field{\*\fldinst{HYPERLINK "https://postgres.devmountain.com/"}}{\fldrslt \cf3 https://postgres.devmountain.com/}}\
 On the left are the tables with their fields, the right is where you will be writing your queries, and the bottom is where you will see the results.\
 Any new tables or records that you add into the database will be removed after you refresh the page.\
 \pard\pardeftab720\sa280\partightenfactor0
@@ -32,14 +32,14 @@ Any new tables or records that you add into the database will be removed after y
 \f0\b\fs28 \cf2 Step 1: Setup\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls1\ilvl0
-\f1\b0\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Create a folder called \'91sql-basics\'92\uc0\u8232 \
-\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Run\'a0
+\f1\b0\fs24 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Create a folder called \'91sql-basics\'92\uc0\u8232 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Run\'a0
 \fs21\fsmilli10800 \cb4 git\'a0init
 \fs24 \cb1 \uc0\u8232 \
-\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Create 5 files:\'a0
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Create 5 files:\'a0
 \fs21\fsmilli10800 \cb4 person.sql
 \fs24 \cb1 ,\'a0
 \fs21\fsmilli10800 \cb4 orders.sql
@@ -48,16 +48,21 @@ Any new tables or records that you add into the database will be removed after y
 \fs24 \cb1 ,\'a0
 \fs21\fsmilli10800 \cb4 employee.sql
 \fs24 \cb1 , and\'a0
-\fs21\fsmilli10800 \cb4 invoice.sql
-\fs24 \cb1 \uc0\u8232 \
-\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Run\'a0
+\fs21\fsmilli10800 \cb4 invoice.sql\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\fs24 \cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	.	}touch person.sql orders.sql artist.sql employee.sql invoice.sql\
+\ls1\ilvl0\expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Run\'a0
 \fs21\fsmilli10800 \cb4 git\'a0add
 \fs24 \cb1 \'a0and\'a0
 \fs21\fsmilli10800 \cb4 git\'a0commit
 \fs24 \cb1 \'a0(don\'92t forget the m flag and a message)\uc0\u8232 \
-\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Create a repo on GitHub and connect it to your local repo\uc0\u8232 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Create a repo on GitHub and connect it to your local repo\uc0\u8232 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f0\b\fs28 \cf2 Step 2: person table\
@@ -65,34 +70,34 @@ Any new tables or records that you add into the database will be removed after y
 
 \f1\b0\fs24 \cf2 In the person.sql file, write out the code for the following problems:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Create a table called person that records a person\'92s id, name, age, height (in cm) , city, favorite_color. The id should be an auto-incrementing id/primary key (use type: SERIAL)\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Add 5 different people into the person database. Remember to not include the person_id because it should auto-increment.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table by height from tallest to shortest.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table by height from shortest to tallest.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table by age from oldest to youngest.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table older than age 20.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table that are exactly 18.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table that are less than 20 and older than 30.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table that are not 27 (use not equals).\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table where their favorite color is not red.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table where their favorite color is not red and is not blue.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table where their favorite color is orange or green.\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table where their favorite color is orange, green or blue (use IN).\uc0\u8232 \
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the people in the person table where their favorite color is yellow or purple (use IN).\uc0\u8232 \
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Create a table called person that records a person\'92s id, name, age, height (in cm) , city, favorite_color. The id should be an auto-incrementing id/primary key (use type: SERIAL)\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Add 5 different people into the person database. Remember to not include the person_id because it should auto-increment.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table by height from tallest to shortest.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table by height from shortest to tallest.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table by age from oldest to youngest.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table older than age 20.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table that are exactly 18.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table that are less than 20 and older than 30.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table that are not 27 (use not equals).\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table where their favorite color is not red.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table where their favorite color is not red and is not blue.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table where their favorite color is orange or green.\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table where their favorite color is orange, green or blue (use IN).\uc0\u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the people in the person table where their favorite color is yellow or purple (use IN).\uc0\u8232 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f0\b\fs28 \cf2 Step 3: orders table\
@@ -100,29 +105,29 @@ Any new tables or records that you add into the database will be removed after y
 
 \f1\b0\fs24 \cf2 In the orders.sql file, write out the code for the following problems:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Create a table called orders that records: order_id, person_id, product_name, product_price, quantity.\uc0\u8232 \
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Create a table called orders that records: order_id, person_id, product_name, product_price, quantity.\uc0\u8232 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls3\ilvl0
-\f0\b \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Add 5 orders to the orders table.\
+\f0\b \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Add 5 orders to the orders table.\
 \pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
 \ls3\ilvl1
-\f1\b0 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Make orders for at least two different people.\uc0\u8232 \
-\ls3\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 person_id should be different for different people.\uc0\u8232 \
+\f1\b0 \cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Make orders for at least two different people.\uc0\u8232 \
+\ls3\ilvl1\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+person_id should be different for different people.\uc0\u8232 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 \uc0\u8232 \u8232 \
-\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all the records from the orders table.\uc0\u8232 \
-\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Calculate the total number of products ordered.\uc0\u8232 \
-\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Calculate the total order price.\uc0\u8232 \
-\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Calculate the total order price by a single person_id.\uc0\u8232 \
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+\uc0\u8232 \u8232 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all the records from the orders table.\uc0\u8232 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Calculate the total number of products ordered.\uc0\u8232 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Calculate the total order price.\uc0\u8232 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Calculate the total order price by a single person_id.\uc0\u8232 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f0\b\fs28 \cf2 Step 4: artist table\
@@ -130,16 +135,16 @@ Any new tables or records that you add into the database will be removed after y
 
 \f1\b0\fs24 \cf2 In the artist.sql file, write out the code for the following problems:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls4\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Add 3 new artists to the artist table. (It already exists.)\uc0\u8232 \
-\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select 10 artists in reverse alphabetical order.\uc0\u8232 \
-\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select 5 artists in alphabetical order.\uc0\u8232 \
-\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all artists that start with the word \'91Black\'92.\uc0\u8232 \
-\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Select all artists that contain the word \'91Black\'92.\uc0\u8232 \
+\ls4\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Add 3 new artists to the artist table. (It already exists.)\uc0\u8232 \
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select 10 artists in reverse alphabetical order.\uc0\u8232 \
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select 5 artists in alphabetical order.\uc0\u8232 \
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all artists that start with the word \'91Black\'92.\uc0\u8232 \
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Select all artists that contain the word \'91Black\'92.\uc0\u8232 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f0\b\fs28 \cf2 Step 5: employee table\
@@ -147,16 +152,16 @@ Any new tables or records that you add into the database will be removed after y
 
 \f1\b0\fs24 \cf2 In the employee.sql file, write out the code for the following problems:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls5\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 List all employee first and last names only that live in Calgary.\uc0\u8232 \
-\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Find the birthdate for the youngest employee.\uc0\u8232 \
-\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Find the birthdate for the oldest employee.\uc0\u8232 \
-\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Find everyone that reports to Nancy Edwards (use the ReportsTo column). * You will need to query the employee table to find the id for Nancy Edwards\uc0\u8232 \
-\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Count how many people live in Lethbridge.\uc0\u8232 \
+\ls5\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+List all employee first and last names only that live in Calgary.\uc0\u8232 \
+\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Find the birthdate for the youngest employee.\uc0\u8232 \
+\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Find the birthdate for the oldest employee.\uc0\u8232 \
+\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Find everyone that reports to Nancy Edwards (use the ReportsTo column). * You will need to query the employee table to find the id for Nancy Edwards\uc0\u8232 \
+\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Count how many people live in Lethbridge.\uc0\u8232 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f0\b\fs28 \cf2 Step 6: invoice table\
@@ -164,26 +169,26 @@ Any new tables or records that you add into the database will be removed after y
 
 \f1\b0\fs24 \cf2 In the invoice.sql file, write out the code for the following problems:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls6\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Count how many orders were made from the USA.\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Find the largest order total amount.\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Find the smallest order total amount.\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Find all orders bigger than $5.\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Count how many orders were smaller than $5.\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Count how many orders were in CA, TX, or AZ (use IN).\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Get the average total of the orders.\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Get the total sum of the orders.\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Update the invoice with an invoice_id of 5 to have a total order amount of 24.\uc0\u8232 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	.	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Delete the invoice with an invoice_id of 1.\uc0\u8232 \
+\ls6\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Count how many orders were made from the USA.\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Find the largest order total amount.\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Find the smallest order total amount.\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Find all orders bigger than $5.\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Count how many orders were smaller than $5.\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Count how many orders were in CA, TX, or AZ (use IN).\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Get the average total of the orders.\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Get the total sum of the orders.\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Update the invoice with an invoice_id of 5 to have a total order amount of 24.\uc0\u8232 \
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	.	}\expnd0\expndtw0\kerning0
+Delete the invoice with an invoice_id of 1.\uc0\u8232 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f0\b\fs28 \cf2 Step 7: Push to GitHub\
